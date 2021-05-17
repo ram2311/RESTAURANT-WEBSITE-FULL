@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Online Reservation</title>
+        <script type="text/javascript"></script>
+        <style>
+         #nav {
+            text-align: center;
+        }
+	    #nav ul,
+        #nav li {
+            list-style-type: none;
+        }
+
+        #nav li {
+            padding: 15px;
+            color:aqua;
+            display: inline-block;
+        }
+
+        #nav li a {
+            color:yellowgreen;
+            font-size: 25px;
+
+        }
+
+        a {
+            outline: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-size: 20px;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+     
+        #d2 {
+            height: 200px;
+            text-align: center;
+            margin-top: 20px;
+            background-size: 100% 100%;
+            color:aqua;
+        }
+        body {
+            background-color: black;
+            background-image: url("RESTURANT PIC BACKGROUND.jpg");
+            color: white;
+            padding: 10px;
+            
+        }
+		.form{
+			background-color: #fff;
+			width: 450px;
+			position:relative;
+			left:400px;
+			opacity: 0.9;
+			color: black;
+			border-radius: 20px;
+		}
+		form div{
+			padding: 10px;
+			opacity: 1;
+		}
+</style>
+	</head>
+	<body>
+            <div id="d2">
+                    <h1>Online Reservation</h1>
+                    <nav id="nav">
+                        <ul>
+                            <li><a href="foodculture.html" ><b>HOME</b></a></li>
+                            <li><a href="menu.html" ><b>MENU</b></a></li>
+                            <li><a href="onlinereservation.html"><b>ONLINE RESERVATION</b></a></li>
+                            <li><a href="feedback.html"><b>FEEDBACK</b></a></li>
+                        </ul>
+                        <nav>
+				</div>
+				<div class="form">
+			<form method="post" onSubmit="return validateForm();">
+				<div style="width: 400px;">
+				</div>
+				<div style="padding-bottom: 18px; text-align: center; font-size: 25px;">Table Reservation</div>
+				<div style="padding-bottom: 18px;">We would be glad to reserve a table for you at our restaurant!</div>
+				<div style="padding-bottom: 18px;">Name<span style="color: red;"> *</span><br/>
+				<input type="text" id="name" name="name" style="width : 400px;" />
+				</div>
+				<div style="padding-bottom: 18px;">Phone<br/>
+				<input type="text" id="phone" name="phone" style="width : 400px;" />
+				</div>
+				<div style="padding-bottom: 18px;">Email<br/>
+				<input type="text" id="email" name="email" style="width : 400px;"/>
+				</div>
+				<div style="padding-bottom: 18px;">Date<span style="color: red;"> *</span><br/>
+				<input type="date" id="date" name="date" style="width : 250px;"/>
+				</div>
+				
+				<div style="padding-bottom: 18px;">Time<span style="color: red;"> *</span><br/>
+				<input type="text" id="time" name="time" style="width : 250px;"/>
+				</div>
+				<div style="padding-bottom: 18px;">Number of Attendees<span style="color: red;"> *</span><br/>
+				<select id="attendees" name="attendees" style="width : 250px;" ><option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</option>
+				<option>10+ (Specify in Comments)</option>
+				</select>
+				</div>
+				<div style="padding-bottom: 18px;">Comments / Additional Requests<br/>
+				<textarea id="data_9" false name="data_9" style="width : 400px;" rows="6" class="form-control"></textarea>
+				</div>
+				<div style="padding-bottom: 18px; text-align:center"><input name="skip_Submit" value="Submit" type="submit"/></div>
+				<div>
+				
+				</form>
+				</div>
+				<script type="text/javascript">
+				function validateForm() {
+				if (isEmpty(document.getElementById('name').value)) {
+				alert('Name is required!');
+				return false;
+				}
+				if (!validateEmail(document.getElementById('email').value)) {
+				alert('Email must be a valid email address!');
+				return false;
+				}
+				if (isEmpty(document.getElementById('date').value)) {
+				alert('Date is required!');
+				return false;
+				}
+				if (isEmpty(document.getElementById('time').value)) {
+				alert('Time is required!');
+				return false;
+				}
+				return true;
+				}
+				function isEmpty(str) { return (str.length === 0); }
+				function validateEmail(email) {
+				var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+				return isEmpty(email) || re.test(email);
+				}
+				</script>
+	</body>
+</html>

@@ -1,0 +1,251 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      background-image: url("RESTURANT PIC BACKGROUND.jpg");
+      padding: 10px;
+      text-align: center;
+    }
+
+    hr {
+      border: dotted #66FF00 6px;
+      border-bottom: none;
+      width: 5%;
+      margin: 10px auto;
+    }
+
+    a {
+      color: white;
+    }
+
+    .e {
+      
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: black;
+      width: 70%;
+      
+      padding: 10px;
+      margin: 15px auto;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .e:hover {
+      transform: scale(1.07);
+    }
+
+    .ab1 {
+      border-radius: 50px;
+      background-color: black;
+      color: white;
+      float: left;
+      margin-left: 5%;
+      display: inline-block;
+      height: 300px;
+      width: 40%;
+      padding-left: 15px;
+
+    }
+
+    .ab2 {
+      border-radius: 50px;
+      background-color: black;
+      margin-left: 5%;
+      display: inline-block;
+      color: white;
+      height: 300px;
+      width: 40%;
+      padding-left: 15px;
+      box-sizing: border-box;
+    }
+
+    .ab1:hover {
+      background-color: yellowgreen;
+      font-weight: bold;
+    }
+
+    .ab2:hover {
+      background-color: aqua;
+      font-weight: bold;
+    }
+
+    .a1 {
+      float: right;
+    }
+
+    .search {
+      padding: 10px;
+      border-radius: 40px;
+    }
+
+    .search:focus {
+      outline: none;
+    }
+
+
+    #head {
+      color:violet;
+      position: relative;
+      font-size: 40px;
+      font-family: Georgia;
+      margin-top: 27px;
+      
+    }
+
+    #logo {
+      float: left;
+      height: 100px;
+      width: 100px;
+    }
+
+    #d2 {
+      height: 200px;
+      margin-top: 80px;
+      background-size: 100% 100%;
+    }
+
+    #head1 {
+      color:aquamarine;
+      text-align: center;
+      font-size: 40px;
+    }
+
+    #nav {
+      text-align: center;
+    }
+
+    #nav ul,
+    #nav li {
+      list-style-type: none;
+    }
+
+    #nav li {
+      padding: 15px;
+      color:aquamarine;
+      display: inline-block;
+    }
+
+    #nav li a {
+      color:yellowgreen;
+      font-size: 25px;
+      text-decoration: none;
+    }
+
+    #nav li a:hover {
+      border-bottom: 1px solid;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+
+<body>
+
+  <img src="menu.jpg"
+    id="logo">
+  <h1 id="head">MENU</h1>
+  <div id="d2">
+    <h1 id="head1"><b>ORDER IT!!!ENJOY IT!!!</b></h1>
+    <nav id="nav">
+      <ul>
+        <li><a href="foodculture.html"><b>HOME</b></a></li>
+        <li><a href="menu.html"><b>MENU</b></a></li>
+        <li><a href="onlinereservation.html"><b>ONLINE RESERVATION</b></a></li>
+        <li><a href="feedback.html"><b>FEEDBACK</b></a></li>
+      </ul>
+      <nav>
+  </div>
+ 
+  <hr><br>
+  <div ng-app="myapp" ng-controller="namesCtrl">
+    <div class="ab1">
+      <p>
+        <center>
+          <h1>Starters</h1>
+        </center>
+      </p><br>
+      <center><img src="starters.jpg" height="110px" width="110px"></center><br><br>
+      <p class="a1">
+        <center>a small dish of food or a drink taken before a meal or the main course of a meal, these tit-bits
+           of food are known to increase appetite and thus known as Appetizers</center>
+      </p>
+    </div>
+    <div class="ab2">
+      <p>
+        <center>
+          <h1>Main course</h1>
+        </center>
+      </p><br>
+      <center><img src="maincourse.jpg" height="110px" width="110px"></center><br><br>
+      <p class="a1">
+        <center>The main dish is usually the heaviest, heartiest, and most complex or substantial dish in a meal.
+           The main ingredient is usually meat, fish or another protein source.</center>
+      </p>
+    </div>
+    <br><br>
+    <p>
+      <center> <input class="search" type="text" ng-model="test" placeholder="ENTER DISH"></center>
+    </p>
+    <div ng-show="myVar1" class="e" ng-repeat="x in names1 | filter:test">
+      <h1>{{x.name}}</h1><br />
+      <p>{{x.info}}</p>
+    </div>
+    <script>
+      angular.module('myapp', []).controller('namesCtrl', function ($scope) {
+        $scope.myVar1 = true;
+        $scope.change = function (num) {
+          if (num === 1) {
+            $scope.myVar1 = true;
+          } else if (num === 2) {
+            $scope.myVar1 = false;
+          }
+        }
+        $scope.names1 = [{
+            "name": "KAMAAL KA PUCHKA",
+            "info": "Baby puffs with sprouts, chutney and crispy chaat stuffing"
+          },
+          {
+            "name": "VEGETARIAN TASTING PLATTER",
+            "info": "An assortment of choicest starters, samosa, paneer tikka, mushrooms and kothimbir wadi"
+          },
+          {
+            "name": "JAIPURI TIKKI",
+            "info": "Crispy asparagus & pinenut paneer tikki coated with lentil strips"
+          },
+          {
+            "name": "DAL TADKA",
+            "info": "Mixed yellow beans freshly tempered with cumin and asafoetida"
+          },
+          {
+            "name": "CAULIFLOWER AND POTATO MASALA ",
+            "info": "Traditional aloo phoolgobi masala tempered with brown onions and cumin"
+          },
+          {
+            "name": "COTTAGE CHEESE BHUNA MAKHNI",
+            "info": "Fresh paneer cubes tossed in butter in a tomato makhni sauce"
+          },
+          {
+            "name": "PALAK PANEER",
+            "info": "A Punjabi delicacy of spinach and cottage cheese, a world famous dish"
+          },
+          {
+            "name": "KERALA KUTTU WITH APPAM",
+            "info": "Mix spring vegetables in a coconut curry with fluffy rice hoppers- a Kerala specialty"
+          },
+          {
+            "name": "TANDOORI SMOKED AUBERGINE ",
+            "info": "Tandoor roasted aubergine hash Punjabi style also called Baingan Bharta "
+          },
+
+        ];
+        
+      });
+    </script>
+</body>
+
+</html>

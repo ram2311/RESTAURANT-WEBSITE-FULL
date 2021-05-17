@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        Food Culture
+    </title>
+    <script src='https://code.responsivevoice.org/responsivevoice.js?key=YOUR_UNIQUE_KEY'></script>
+    <style>
+        body {
+            background-color: black;
+            background-image: url("RESTURANT PIC BACKGROUND.jpg");
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .slide{
+            position:relative;
+            left:400px;
+        }
+
+        #head {
+            position: relative;
+            font-size: 40px;
+            font-family: Georgia;
+            color: yellowgreen;
+        }
+
+        #logo {
+            float: left;
+            height: 250px;
+            width: 250px;
+        }
+
+        #d2 {
+            height: 200px;
+            margin-top: 80px;
+            background-size: 100% 100%;
+            color:aqua;
+            
+        }
+
+        #head1 {
+            color:aqua;
+            text-align: center;
+            font-size: 40px;
+        }
+        #nav {
+            text-align: center;
+        }
+
+        #nav ul,
+        #nav li {
+            list-style-type: none;
+        }
+
+        #nav li {
+            padding: 15px;
+            display: inline-block;
+        }
+
+        #nav li a {
+            color:aqua;
+            font-size: 25px;
+
+        }
+
+        a {
+            outline: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-size: 20px;
+        }
+
+        a:link {
+            color: #265301;
+        }
+
+        a:visited {
+            color: #437A16;
+        }
+
+        a:focus {
+            border-bottom: 1px solid;
+            background: #BAE498;
+        }
+
+        a:hover {
+            border-bottom: 1px solid;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        a:active {
+            background: #265301;
+            color: #CDFEAA;
+        }
+
+        #nav {
+            position: relative;
+        }
+
+        #d3 {
+            background-color: #f2f2f2;
+            width: 100%;
+            height: 100%;
+        }
+
+        iframe {
+            margin: 40px;
+        }
+
+        #vid {
+            border-style: outset;
+            background-color: black;
+            box-shadow: 5px 5px 5px green;
+            border-radius: 10px;
+        }
+
+       
+
+        #vid:hover {
+            background-color: green;
+        }
+
+        #foot {
+            border-style: outset;
+            background-color: gray;
+            border-radius: 5px;
+        }
+
+        .p {
+            font-family: georgia;
+        }
+
+        .section {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+            margin: 40px 50px;
+            padding: 40px;
+        }
+
+        hr {
+            color: black;
+            background-color: black;
+            height: 2px;
+            margin: 40px auto;
+            max-width: 350px;
+            text-align: center;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    
+
+    <img src="fc.jpg" id="logo">
+    <h1 id="head">Food Culture</h1>
+    <div id="d2">
+        <h1 id="head1"><b>LATE NIGHT AT OFFICE?<br>WE ARE HERE!!!</b></h1>
+
+        <nav id="nav">
+            <ul>
+                <li><a href="foodculture.html" ><b>HOME</b></a></li>
+                <li><a href="menu.html" ><b>MENU</b></a></li>
+                <li><a href="onlinereservation.html"><b>ONLINE RESERVATION</b></a></li>
+                <li><a href="feedback.html"><b>FEEDBACK</b></a></li>
+            </ul>
+            <nav>
+    </div>
+    <div class="slide" style="max-width:500px">
+        <img class="mySlides" src="burger.jpg" style="width:100%">
+        <img class="mySlides" src="starters.jpg" style="width:100%">
+        <img class="mySlides" src="maincourse.jpg" style="width:100%">
+      </div>
+      
+      <script>
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
+      </script>
+      
+    <div class="section">
+        <h1>
+            <font color=rgb(14,219,93)>WHAT IS ITALIAN CUSINE</font>
+        </h1>
+        <p class="p">Italy is one of the leading countries of the world and it has been so since the early times. Italian culture is rich and detailed.
+
+            Whether its food, architecture, philosophy, or fashion, they have been at the top of the game.
+             If you ever take a trip to Italy, you can experience their rich culture and
+             experience some of the best-known delicacies of the world. Italians are good at everything, 
+            even partying to death. Tourism in Italy is growing each and every year.
+        </p>
+        <u><a href="https://en.wikipedia.org/wiki/Italian_cuisine" target="_blank">know more..</a></u>
+        <hr/>
+        <h1>
+            <font color=rgb(14,219,93)>WHAT IS CHINESE CUSINE</font>
+        </h1>
+        <p class="p">Indian cuisine consists of a wide variety of regional and traditional 
+            cuisines native to the Indian subcontinent. Given the range of diversity in soil type,
+             climate, culture, ethnic groups, and occupations, these cuisines vary substantially from 
+             each other and use locally available spices, herbs, vegetables, and fruits. Indian food is also heavily influenced 
+            by religion, in particular Hinduism, cultural choices and traditions.</p>
+        <u><a href="https://en.wikipedia.org/wiki/Indian_cuisine" target="_blank">know more..</a></u>
+        <hr />
+        <h1>
+            <font color=rgb(14,219,93) face="georgia"><u>EXPERT COOK'S DISHES</u></font>
+        </h1>
+        <div id="vid">
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1s_mO8F4x50" frameborder="0" allow="accelerometer;
+             autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/HQt66gXwJM8" frameborder="0" allow="accelerometer;
+             autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <hr />
+        <div>
+            <h1><font color=rgb(14,219,93)>About Us:</font></h1>
+            <p>we serve a wide variety of authentic Hyderabad, Indian and Indo Chinese cuisine to our guests.
+                 Cooking is an art and our chefs have mastered the art by combining traditional recipes with their own
+                  personal and progressive approach. Every delicious dish that leaves our kitchen is created by one of our highly experienced chefs.
+                Whether you eat a simple chicken tikka kebab or our signature dish Hyderabad Nawabi Chicken Dum Biryani,
+                 your tummy will thank us for the fresh and delicious food.</p>
+        </div>
+    </div>
+</body>
+
+</html>
